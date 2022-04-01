@@ -1,11 +1,16 @@
 <template>
-  <div>
+  <div id="app">
     <Header />
+    <router-view />
+    
   </div>
 </template>
 
 <script>
+import "./style/global.css"
+
 import Header from "./components/Header.vue"
+
 export default {
   name: 'App',
   components: {
@@ -13,11 +18,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-</style>

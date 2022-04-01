@@ -54,7 +54,6 @@ export default {
         text-decoration: none;
         color: white;
         font-size: 25px;
-        font-family: Georgia;
         transition: .5s;
     }
 
