@@ -1,7 +1,10 @@
 <template>
     <main>
         <h1>Noticias</h1>
-        <h2 v-if="msg_carregamento">agurde o servidor terminar a consulta</h2>
+        <div class="carregamento" v-if="msg_carregamento">
+            <img src="https://media3.giphy.com/media/xKqbhrk8PL1CVqmKgY/giphy.gif?cid=ecf05e47pr7y4i4hw9qesx34r1ir0zl6sejusspncd9vswuk&amp;rid=giphy.gif&amp;ct=g" alt="fitness loading GIF by Gym Career">
+            <h2>agurde o servidor terminar a consulta</h2>
+        </div>
         <div v-else v-for="noticia in noticias" :key="noticia.id">
             <div class="noticia">
                 <img class="imagem" :src="noticia.imagem" alt="imagem noticia">
@@ -69,7 +72,7 @@ export default {
     }
     .imagem {
         border: solid 1px black;
-        width: 350px;
+        width: 450px;
         height: 260px;
     }
 
@@ -101,4 +104,9 @@ export default {
         background-color: black;
     }
 
+    .carregamento {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 </style>>
