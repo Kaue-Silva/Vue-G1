@@ -1,8 +1,8 @@
 <template>
     <footer>
         <ul>
-            <li><a href="#"><img src="@/assets/linkedin.png" alt="linkedin"></a></li>
-            <li><a href="#"><img src="@/assets/github.png" alt="github"></a></li>
+            <li><a href="https://www.linkedin.com/in/kaue-silva2004/" target="_blank"><img src="@/assets/linkedin.png" alt="linkedin"></a></li>
+            <li><a href="https://github.com/Kaue-Silva" target="_blank"><img src="@/assets/github.png" alt="github"></a></li>
         </ul>
     </footer>
 </template>
@@ -16,6 +16,7 @@ export default {
         background-color: #253547;
         width: 100%;
         height: 75px;
+        margin-top: 10px ;
     }
 
     footer ul {

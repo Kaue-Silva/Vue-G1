@@ -2,13 +2,13 @@
     <header>
         <nav>
             <div id="logo">
-                <a href="#">
+                <router-link to="/">
                     <img src="@/assets/logo.png" alt="logo">
-                </a>
+                </router-link>
             </div>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Noticias</a></li>
+                <li><router-link to="/">Inicio</router-link></li>
+                <li><router-link to="/noticias">Noticias</router-link></li>
             </ul>
         </nav>
     </header>

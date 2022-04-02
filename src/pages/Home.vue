@@ -1,7 +1,7 @@
 <template>
     <main>
         <div id="home">
-            <p>Projeto Vue-G1, Front - End Criado para um projeto de API disponível no github, 
+            <p>Projeto Vue-G1, Front - End Criado para um projeto de API <a href="https://github.com/Kaue-Silva/Vue-G1/tree/master" target="_blank">disponível no github</a>, 
             API foi feita para fins educativos, assim como este site,
             site criado para consolidar conhecimentos em Vue.js.<br>
             </p>
