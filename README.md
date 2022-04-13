@@ -1,24 +1,47 @@
-# g1_projeto
+# Site de Lembretes
+[![NPM](https://img.shields.io/badge/license-GNU-green)](https://github.com/Kaue-Silva/Vue-G1/blob/master/LICENSE)
 
-## Project setup
-```
+## Sobre o Projeto
+
+Projeto e basicamente um Front para a o projeto API-G1, 
+tambem serve para consolidar meus conhecimentos com Vue.js.
+
+## Informações sobre o projeto
+Projeto consome uma API que faz uma raspagem de dados do site G1 Notcias,
+lembrando que o projeto foi feito para fins educativos.
+
+## Layout
+
+Layout construido com Vue.js.
+![Tela inicial](assets/Home.png)
+![Carregamento api](assets/Consulta%20api.png)
+![Noticia](assets/Noticias.png)
+
+
+## Tecnologias Utilizadas
+## Back end
+- https://github.com/Kaue-Silva/Api_Noticias_G1
+
+## Front end
+- HTML
+- CSS
+- Javascript
+- Axios
+- Vue.js
+
+## Como executar o projeto
+Necessario ja ter inicializado a api de back-end
+
+https://github.com/Kaue-Silva/Api_Noticias_G1
+``` bash
+# Instalar Dependencias
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+# Iniciar Servidor
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Autor
+Kauê Silva de Carvalho
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://www.linkedin.com/in/kaue-silva2004/
