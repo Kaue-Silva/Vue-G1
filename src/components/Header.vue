@@ -29,6 +29,8 @@ export default {
     header {
         background-color: #253547;
         width: 100%;
+        position: fixed;
+        top: 0;
     }
 
     nav {

@@ -61,10 +61,6 @@ export default {
     h2 {
         margin: 15px;
     }
-
-    .main {
-        height: calc(100vh - 75px);
-    }
     
     .noticia {
         margin: 20px;

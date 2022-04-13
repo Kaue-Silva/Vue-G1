@@ -38,10 +38,6 @@ export default {
 }
 </script>
 <style scoped>
-    main {
-        height: calc(100vh - 200px);
-    }
-
     #home {
         border: solid 1px black;
         margin: 60px auto;

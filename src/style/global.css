@@ -4,3 +4,8 @@
     box-sizing: border-box;
     font-family: Georgia;
   }
+
+main {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}

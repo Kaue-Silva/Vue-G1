@@ -15,8 +15,9 @@ export default {
     footer {
         background-color: #253547;
         width: 100%;
-        height: 75px;
         margin-top: 10px ;
+        position: fixed;
+        bottom: 0;
     }
 
     footer ul {
