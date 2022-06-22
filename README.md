@@ -13,9 +13,9 @@ lembrando que o projeto foi feito para fins educativos.
 ## Layout
 
 Layout construido com Vue.js.
-![Tela inicial](assets/Home.png)
-![Carregamento api](assets/Consulta%20api.png)
-![Noticia](assets/Noticias.png)
+![Carregamento api](assets/carregamento-api.png)
+![Topo da Pagina](assets/topo-pagina.png)
+![Final da Pagina](assets/final-pagina.png)
 
 
 ## Tecnologias Utilizadas
