@@ -2,8 +2,8 @@
     <footer class="rodape">
         <div class="social">
             <ul>
-                <li><a href="#"><img src="@/assets/linkedin.png" alt="linkedin link"></a></li>
-                <li><a href="#"><img src="@/assets/github.png" alt="github link"></a></li>
+                <li><a href="https://github.com/Kaue-Silva"><img src="@/assets/linkedin.png" alt="linkedin link"></a></li>
+                <li><a href="https://www.linkedin.com/in/kaue-silva2004/"><img src="@/assets/github.png" alt="github link"></a></li>
             </ul>
         </div>
         <div class="autor">
