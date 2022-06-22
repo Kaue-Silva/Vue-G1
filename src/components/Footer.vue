@@ -1,9 +1,22 @@
 <template>
-    <footer>
-        <ul>
+    <footer class="rodape">
+        <div class="social">
+            <ul>
+                <li><a href="#"><img src="@/assets/linkedin.png" alt="linkedin link"></a></li>
+                <li><a href="#"><img src="@/assets/github.png" alt="github link"></a></li>
+            </ul>
+        </div>
+        <div class="autor">
+            <p>Projeto By: Kauê Silva de Carvalho</p>
+            <p>Projeto Para Fins Educativos</p>
+        </div>
+        <div class="logo">
+            <img src="@/assets/logo.png" alt="logo project g1">
+        </div>
+        <!-- <ul>
             <li><a href="https://www.linkedin.com/in/kaue-silva2004/" target="_blank"><img src="@/assets/linkedin.png" alt="linkedin"></a></li>
             <li><a href="https://github.com/Kaue-Silva" target="_blank"><img src="@/assets/github.png" alt="github"></a></li>
-        </ul>
+        </ul> -->
     </footer>
 </template>
 <script>
@@ -12,25 +25,30 @@ export default {
 }
 </script>
 <style scoped>
-    footer {
-        background-color: #253547;
-        width: 100%;
-        margin-top: 10px ;
-        position: fixed;
+    .rodape {
+        position: static;
         bottom: 0;
+        display: flex;
+        flex-direction: row;
+        background-color: var(--wp--preset--color--blue);
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        width: 100%;
     }
 
-    footer ul {
-        display: flex;
-        justify-content: center;
+    .autor {
+         font-family: 'Tekton Pro', 'Georgia';
+         color: var(--wp--preset--color--white);
+         font-size: 20pt;
+         text-align: center;
     }
-    
-    footer ul li {
-        list-style: none;
-        margin: 0 5px;
+
+    .social {
+        margin: 0px 10px;
     }
-    
-    footer ul li a img {
-        width: 50px;
+
+    .logo {
+        margin: 0px 10px;
     }
 </style>

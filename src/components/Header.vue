@@ -1,16 +1,14 @@
 <template>
-    <header>
-        <nav>
-            <div id="logo">
-                <router-link to="/">
-                    <img src="@/assets/logo.png" alt="logo">
-                </router-link>
-            </div>
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="@/assets/logo.png" alt="logo project g1">
+        </div>
+        <div class="social">
             <ul>
-                <li><router-link to="/">Inicio</router-link></li>
-                <li><router-link to="/noticias">Noticias</router-link></li>
+                <li><a href="#"><img src="@/assets/linkedin.png" alt="linkedin link"></a></li>
+                <li><a href="#"><img src="@/assets/github.png" alt="github link"></a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 </template>
 
@@ -26,48 +24,25 @@ export default {
 }
 </script>
 <style scoped>
-    header {
-        background-color: #253547;
-        width: 100%;
-        position: fixed;
+    .cabecalho {
+        /* position: fixed; */
         top: 0;
-    }
-
-    nav {
-        padding: 10px;
         display: flex;
-        justify-content: space-between;
+        flex-grow: wrap;
         flex-direction: row;
+        background-color: var(--wp--preset--color--blue);
+        height: 90px;
+        width: 100%;
         align-items: center;
+        justify-content: space-between;
     }
     
-    nav ul {
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-    }
-
-    nav ul li {
-        margin: 0 10px;
-        flex-direction: row;
+    .logo {
+        margin-left: 15px;
     }
     
-    nav ul li a {
-        text-decoration: none;
-        color: white;
-        font-size: 25px;
-        transition: .5s;
-    }
-
-    nav ul li a:hover {
-        opacity: 0.5;
-    }
-
-    #logo {
-        align-items: start;
+    .social {
+        margin-right: 20px;
     }
     
-    #logo img{
-        width: 60px;
-    }
 </style>

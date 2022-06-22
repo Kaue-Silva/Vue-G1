@@ -1,11 +1,39 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Georgia;
   }
 
-main {
-  margin-top: 100px;
-  margin-bottom: 100px;
+body {
+    --wp--preset--color--blue:#3394DE;
+    --wp--preset--color--black:#0000;
+    --wp--preset--color--white:#FFFF;
+    font-family: tekton-pro, Georgia;
+  }
+
+
+.logo img {
+    height: 80px;
+    width: 150px;
+}
+
+.social img {
+    height: 70px;
+    width: 70px;
+    border: 1px solid black;
+    border-radius: 70px;
+    transition: 0.5s;
+}
+
+.social img:hover {
+    box-shadow: 2px 2px white;
+}
+
+.social ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.social li {
+    margin: 0px 5px;
 }

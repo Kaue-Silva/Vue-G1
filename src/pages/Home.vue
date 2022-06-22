@@ -1,56 +1,130 @@
 <template>
-    <main>
-        <div id="home">
-            <p>Projeto Vue-G1, Front - End Criado para um projeto de API <a href="https://github.com/Kaue-Silva/Vue-G1/tree/master" target="_blank">disponível no github</a>, 
-            API foi feita para fins educativos, assim como este site,
-            site criado para consolidar conhecimentos em Vue.js.<br>
-            </p>
-            <br>
-            <p>Tecnologias Usadas:</p>
-            <ul>
-                <li>Front-End
+    <main class="container">
+        <div class="carregamento" v-if="msg_carregamento">
+            <img src="https://media3.giphy.com/media/xKqbhrk8PL1CVqmKgY/giphy.gif?cid=ecf05e47pr7y4i4hw9qesx34r1ir0zl6sejusspncd9vswuk&amp;rid=giphy.gif&amp;ct=g" alt="fitness loading GIF by Gym Career">
+            <h2>agurde o servidor terminar a consulta</h2>
+        </div>
+        <div class="container-noticia" v-for="noticia in noticias" :key="noticia.id">    
+            <div class="noticia">
+                <div class="imagem">
+                    <img :src="noticia.imagem" alt="imagem noticia" v-if="noticia.imagem">
+                </div>
+                <div class="noticia-informacao">
+                    <h1>{{ noticia.titulo }}</h1>
                     <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-                        <li>Vue.js</li>
-                        <li>Axios</li>
+                        <li v-for="(complemento, i) in noticia.complementos" :key="i">{{ complemento }}</li>
                     </ul>
-                </li>
-            </ul>
-            <ul>
-                <li>Back-End
-                    <ul>
-                        <li>Python</li>
-                        <li>Flask</li>
-                        <li>Selenium</li>
-                    </ul>
-                </li>
-            </ul>
+                    <div class="data-hora">
+                        <ul>
+                            <li>{{ noticia.hora }}</li> <li v-if="noticia.hora && noticia.local">-</li> <li>{{ noticia.local }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="divisoria"></div>
         </div>
     </main>
 </template>
 <script>
+import api from "@/services/api"
+
 export default {
     name: "HomePage",
-    components: {
-    }
+    data() {
+       return {
+           noticias: [],
+           msg_carregamento: true
+       }
+    }, 
+    components: {},
+    methods: {
+        async getNoticias() {
+            await api.get("/noticias")
+            .then((response) => {
+                this.noticias = response.data
+                console.log(this.noticias)
+                this.msg_carregamento = false
+            })
+        }
+    },
+    mounted() {
+        this.getNoticias()
+    },
 }
 </script>
 <style scoped>
-    #home {
-        border: solid 1px black;
-        margin: 60px auto;
+    .container {
+        min-height: 483px;
+    }
+
+    .carregamento{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+    }
+
+    .carregamento img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .noticia {
+        display: flex;
+        flex-direction: row;
+        margin: 0px auto;
+        margin-top: 45px;
         width: 80%;
-        padding: 40px;
     }
 
-    #home p {
-        font-size: 20px;
+    .imagem {
+        display: flex;
+        justify-content: left;
+    }
+    .imagem img {
+        width: 400px;
+        max-height: 225px;
     }
 
-    ul {
-        margin-left: 25px;
-        font-size: 20px;
+    .noticia-informacao {
+        display: flex;
+        flex-direction: column;
+        flex-grow: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 10px 30px;
+        font-family: tekton-pro, Georgia;
+        min-height: 160px;
+    }
+
+    .noticia-informacao > ul {
+        margin-left: 20px;
+    }
+
+    .noticia-informacao h1 {
+        font-size: 27pt;
+    }
+
+    .noticia-informacao li, .data-hora li {
+        font-size: 13pt;
+    }
+
+    .data-hora ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .data-hora li {
+        margin: 0 3px;
+    }
+
+    .divisoria {
+        height: 3px;
+        width: 90%;
+        background-color:grey;
+        margin: 45px auto;
+        border-radius: 20px;
     }
 </style>
