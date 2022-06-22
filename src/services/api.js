@@ -1,10 +1,7 @@
 import axios from "axios"
 
 const api = axios.create({
-    baseURL:"http://localhost:8080/",
-    headers: {  
-        'Access-Control-Allow-Origin': '*',
-    },
+    baseURL:"https://vueg1-api.herokuapp.com/",
 })
 
 export default api

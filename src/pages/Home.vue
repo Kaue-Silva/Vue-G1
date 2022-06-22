@@ -42,7 +42,6 @@ export default {
             await api.get("/noticias")
             .then((response) => {
                 this.noticias = response.data
-                console.log(this.noticias)
                 this.msg_carregamento = false
             })
         }
