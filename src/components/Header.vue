@@ -25,7 +25,6 @@ export default {
 </script>
 <style scoped>
     .cabecalho {
-        /* position: fixed; */
         top: 0;
         display: flex;
         flex-grow: wrap;
