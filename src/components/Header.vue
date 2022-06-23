@@ -5,8 +5,8 @@
         </div>
         <div class="social">
             <ul>
-                <li><a href="https://github.com/Kaue-Silva"><img src="@/assets/linkedin.png" alt="linkedin link"></a></li>
-                <li><a href="https://www.linkedin.com/in/kaue-silva2004/"><img src="@/assets/github.png" alt="github link"></a></li>
+                <li><a href="https://www.linkedin.com/in/kaue-silva2004/"><img src="@/assets/linkedin.png" alt="linkedin link"></a></li>
+                <li><a href="https://github.com/Kaue-Silva"><img src="@/assets/github.png" alt="github link"></a></li>
             </ul>
         </div>
     </header>
@@ -34,7 +34,7 @@ export default {
         height: 90px;
         width: 100%;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     }
     
     .logo {
@@ -43,6 +43,17 @@ export default {
     
     .social {
         margin-right: 20px;
+    }
+
+    @media (max-width: 500px) {
+        .logo img {
+            width: 120px;
+            height: 80px;
+        }
+
+        .social {
+            display: none;
+        }
     }
     
 </style>

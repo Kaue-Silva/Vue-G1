@@ -51,4 +51,16 @@ export default {
     .logo {
         margin: 0px 10px;
     }
+
+    @media (max-width: 500px) {
+        .logo {
+            display: none;
+        }
+        .autor {
+            display: none;
+        }
+        .rodape {
+            justify-content: center;
+        }
+    }
 </style>

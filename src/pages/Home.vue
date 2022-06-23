@@ -16,7 +16,7 @@
                     </ul>
                     <div class="data-hora">
                         <ul>
-                            <li>{{ noticia.hora }}</li> <li v-if="noticia.hora && noticia.local">-</li> <li>{{ noticia.local }}</li>
+                            <li>{{ noticia.hora }}</li> <li v-if="noticia.hora && noticia.local">&nbsp;-&nbsp;</li> <li>{{ noticia.local }}</li>
                         </ul>
                     </div>
                 </div>
@@ -115,9 +115,9 @@ export default {
         flex-direction: row;
     }
 
-    .data-hora li {
+    /* .data-hora li {
         margin: 0 3px;
-    }
+    } */
 
     .divisoria {
         height: 3px;
@@ -125,5 +125,30 @@ export default {
         background-color:grey;
         margin: 45px auto;
         border-radius: 20px;
+    }
+
+    @media (max-width:500px) {
+        .noticia {
+            flex-direction: column;
+            width: 90%;
+        }
+        
+        .imagem {
+            justify-content: center;
+        }
+        
+        .imagem img {
+            width: 90%;
+            max-height: 225px;
+        }
+
+        .noticia-informacao h1 {
+            font-size: 19pt;
+        }
+
+        .noticia-informacao li {
+            font-size: 15pt;
+        }
+
     }
 </style>
